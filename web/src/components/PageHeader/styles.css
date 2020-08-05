@@ -57,5 +57,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: flex-start;
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px;
     }
 }
