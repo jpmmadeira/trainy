@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 
-    color: var(--color-text-in-primary);
+    color: var(--color-primary-dark);
     background: var(--color-primary);
 }
 
@@ -14,7 +14,8 @@
     height: 10rem;
 }
 
-.hero.image {
+.hero-image {
+    align-self: flex-end;
     width: 100%;
 }
 
@@ -57,7 +58,7 @@
 }
 
 .buttons-container a img {
-    width: 4rem;
+    width: 3.4rem;
 }
 
 .buttons-container a.trainers {
@@ -109,7 +110,7 @@
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-areas:
             "logo hero hero"
-            "buttons buttons total";
+            "buttons buttons  total";
     }
 }
 
@@ -121,7 +122,7 @@
 }
 
 .logo-container h2{
-    text-align: initial;
+    text-align: center;
     font-size: 3.6rem;
 }
 
@@ -132,6 +133,7 @@
 .hero-image {
     grid-area: hero;
     justify-self: end;
+    width: 90%;
 }
 
 .buttons-container {
