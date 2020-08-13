@@ -35,7 +35,7 @@
     font: 1.6rem Archivo;
 }
 
-#search-trainers .input-block:focus-within {
+#search-trainers .input-block:focus-within::after {
     width: calc(100% - 3.2rem);
     height: 2px;
     content: '';
