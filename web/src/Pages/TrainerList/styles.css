@@ -64,7 +64,8 @@
         bottom: -28px;
     }
 
-    #search-trainers .input-block+.input-block {
+    #search-trainers .input-block + .input-block,
+    #search-trainers .select-block + .select-block {
         margin-top: 0;
     }
 
