@@ -1,36 +1,57 @@
 import React from 'react';
 
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
+import api from '../../services/api';
 
 import './styles.css';
 
-function TrainerItem() {
+export interface Trainer {
+    id: number
+    avatar: string
+    bio: string
+    cost: number
+    name: string
+    specialization: string
+    whatsapp: string
+}
+
+interface TrainerItemProps {
+    trainer: Trainer
+}
+
+const TrainerItem: React.FC<TrainerItemProps> = ({ trainer }) => {
+
+    function createNewConnection() {
+        api.post('connections', { user_id: trainer.id });
+    }
+
     return (
         <article className="trainer-item">
             <header>
-                <img src="https://avatars0.githubusercontent.com/u/55503995?s=460&u=10792bd9c1c4dfb9ca9b288ec99b196f09a662a5&v=4" alt="avatar" />
+                <img src={trainer.avatar} alt={trainer.name} />
                 <div>
-                    <strong>João Madeira</strong>
-                    <span>Bodybuilding</span>
+                    <strong>{trainer.name}</strong>
+                    <span>{trainer.specialization}</span>
                 </div>
             </header>
 
             <p>
-                Enthusiast for everything about bodybuilding train
-                <br></br>
-                <br></br>
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                {trainer.bio}
             </p>
 
             <footer>
                 <p>
                     Price/hour
-                            <strong>80,00€</strong>
+                            <strong>{trainer.cost}€</strong>
                 </p>
-                <button type="button">
+                <a
+                    target="blank"
+                    onClick={createNewConnection}
+                    href={`https://wa.me/${trainer.whatsapp}`}
+                >
                     <img src={whatsappIcon} alt="Whatsapp" />
                             Contact me
-                </button>
+                </a>
             </footer>
         </article >
     )

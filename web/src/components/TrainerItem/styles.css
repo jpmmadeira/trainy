@@ -56,22 +56,22 @@
     display: block;
 }
 
-.trainer-item footer button {
+.trainer-item footer a {
     width: 20rem;
     height: 5.6rem;
     background: var(--color-secundary);
     color: var(--color-button-text);
     border: 0;
     border-radius: 0.8rem;
-    cursor: pointer;
     font: 700 1.4rem Archivo;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     transition: 0.2s;
+    text-decoration: none;
 }
 
-.trainer-item footer button:hover {
+.trainer-item footer a:hover {
     background: var(--color-secundary-dark);
 }
 
@@ -82,7 +82,7 @@
         padding: 3.2rem;
     }
 
-    .trainer-item > p {
+    .trainer-item>p {
         padding: 0 3.2rem;
     }
 
@@ -103,7 +103,7 @@
         justify-content: center;
     }
 
-    .trainer-item footer button img{
+    .trainer-item footer button img {
         margin-right: 1.6rem;
     }
 }

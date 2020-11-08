@@ -20,7 +20,7 @@
 }
 
 .logo-container {
-    text-align: left;
+    text-align: center;
     margin-bottom: 3.2rem;
 }
 
@@ -91,10 +91,6 @@
 
 .total-connections {
     font-size: 1.8rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .total-connections img {
@@ -107,10 +103,10 @@
 
         display: grid;
         grid-template-rows: 350px 1fr;
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "logo hero hero"
-            "buttons buttons  total";
+            "logo hero"
+            "buttons total";
     }
 }
 
@@ -132,8 +128,8 @@
 
 .hero-image {
     grid-area: hero;
-    justify-self: end;
-    width: 90%;
+    justify-self: center;
+    width: 95%;
 }
 
 .buttons-container {
@@ -147,5 +143,5 @@
 
 .total-connections {
     grid-area: total;
-    justify-self: end;
+    justify-self: center;
 }
